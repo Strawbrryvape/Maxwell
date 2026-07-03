@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui — DARK MODE */
+    --background: 240 14% 4%;
+    --foreground: 240 6% 94%;
+    --card: 240 11% 7%;
+    --card-foreground: 240 6% 94%;
+    --popover: 240 11% 7%;
+    --popover-foreground: 240 6% 94%;
+    --primary: 355 56% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 8% 14%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 8% 16%;
+    --input: 240 8% 16%;
+    --ring: 355 56% 47%;
+    --radius: 0.625rem;
+    --sidebar-background: 240 11% 7%;
+    --sidebar-foreground: 240 6% 94%;
+    --sidebar-primary: 355 56% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 8% 14%;
+    --sidebar-accent-foreground: 240 6% 94%;
+    --sidebar-border: 240 8% 16%;
+    --sidebar-ring: 355 56% 47%;
+
+    /* Maxwell Dark Tokens — Civic Brutalism */
+    --maxwell-primary: #B8333E;
+    --maxwell-primary-hover: #D64550;
+    --maxwell-primary-light: rgba(184, 51, 62, 0.12);
+    --maxwell-secondary: #10B981;
+    --maxwell-secondary-light: rgba(16, 185, 129, 0.12);
+    --maxwell-accent: #F59E0B;
+    --maxwell-accent-light: rgba(245, 158, 11, 0.12);
+    --maxwell-background: #0A0A0F;
+    --maxwell-surface: #141419;
+    --maxwell-surface-raised: #1E1E26;
+    --maxwell-text-primary: #F0F0F5;
+    --maxwell-text-secondary: #8A8A96;
+    --maxwell-text-tertiary: #5A5A66;
+    --maxwell-border: #2A2A35;
+    --maxwell-border-subtle: #1E1E26;
+    --maxwell-danger: #DC2626;
+    --maxwell-danger-light: rgba(220, 38, 38, 0.12);
+
+    /* Category Badge Colors — Dark Mode */
+    --category-housing-bg: rgba(184, 51, 62, 0.10);
+    --category-housing-text: #E0555F;
+    --category-housing-border: rgba(184, 51, 62, 0.25);
+    --category-medical-bg: rgba(16, 185, 129, 0.10);
+    --category-medical-text: #34D399;
+    --category-medical-border: rgba(16, 185, 129, 0.25);
+    --category-financial-bg: rgba(245, 158, 11, 0.10);
+    --category-financial-text: #FBBF24;
+    --category-financial-border: rgba(245, 158, 11, 0.25);
+    --category-legal-bg: rgba(59, 91, 219, 0.10);
+    --category-legal-text: #6B8CF7;
+    --category-legal-border: rgba(59, 91, 219, 0.25);
+    --category-vehicle-bg: rgba(2, 132, 199, 0.10);
+    --category-vehicle-text: #38BDF8;
+    --category-vehicle-border: rgba(2, 132, 199, 0.25);
+    --category-employment-bg: rgba(234, 88, 12, 0.10);
+    --category-employment-text: #FB923C;
+    --category-employment-border: rgba(234, 88, 12, 0.25);
+    --category-general-bg: rgba(90, 90, 102, 0.10);
+    --category-general-text: #8A8A96;
+    --category-general-border: rgba(90, 90, 102, 0.25);
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-full: 9999px;
+
+    /* Animation */
+    --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
+    --duration-enter: 300ms;
+    --duration-scan: 2000ms;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--maxwell-background);
+    color: var(--maxwell-text-secondary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar hiding for horizontal chips */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
